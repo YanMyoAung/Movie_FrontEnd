@@ -61,7 +61,10 @@ body {
     display: block;
   }
 
-  #director_box{
+  #director_box,
+  #gallery_box,
+  #cast_box,
+  #genre_box{
     padding : 30px;
     padding-left: 0px;
     margin : 30px;
@@ -117,10 +120,18 @@ body {
     font-size: 20px;
   }
 
-  #director_table{
+  #director_table,
+  #genre_table,
+  #gallery_table,
+  #cast_table{
     margin : 30px;
   }
 
   .director_delete{
     background-color: rgb(211, 31, 31) !important;
+  }
+
+  .gallery_img{
+    width: 130px;
+    height: auto;
   }

@@ -9,7 +9,7 @@
 <body>
 
   <div class="sidebar">
-    <a class="active" href="#movie" id="movie_click">Movies</a>
+    <a class="active" href="#movie" id="movie_click">Add Movie</a>
     <a href="#director" id="director_click">Directors</a>
     <a href="#genre" id="genre_click">Genres</a>
     <a href="#gallery" id="gallery_click">Gallery</a>
@@ -19,11 +19,30 @@
   </div>
 
   <div class="content">
+
+    <!-- movie box start -->
     <div id="movie" class="section active">
-      <h2>Movies</h2>
-      <p>This is the home section.</p>
+
+      <div id="director_box">
+        <tinymce-editor api-key="0jljmzx5rvyw9rb2213n8iprrfzmerqlwj0ok2x7ha26qg20" height="500" menubar="false" plugins="advlist autolink lists link image charmap preview anchor
+      searchreplace visualblocks code fullscreen
+      insertdatetime media table code help wordcount" toolbar="undo redo | blocks | bold italic backcolor |
+      alignleft aligncenter alignright alignjustify |
+      bullist numlist outdent indent | removeformat | help" content_style="body
+    {
+      font-family:Helvetica,Arial,sans-serif;
+      font-size:14px
+    }">
+
+          <!-- Adding some initial editor content -->
+          &lt;p&gt;Welcome to the TinyMCE Web Component example!&lt;/p&gt;
+
+        </tinymce-editor>
+      </div>
     </div>
+
     <div id="director" class="section">
+
       <div id="director_box">
         <input list="director_list" id="director_input">
         <button id="director_save"> Add Director</button>
@@ -35,6 +54,7 @@
           <option value="Safari">
         </datalist>
       </div>
+
       <div id="director_table">
         <table>
           <tr>
@@ -70,33 +90,269 @@
             </td>
           </tr>
         </table>
-
       </div>
     </div>
+    <!-- movie box end -->
+
+    <!-- genre box start -->
     <div id="genre" class="section">
-      <h2>Genres</h2>
-      <p>This is the contact section.</p>
+      <div id="genre_box">
+        <input list="director_list" id="director_input">
+        <button id="director_save"> Add Genre</button>
+        <datalist id="director_list">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+      </div>
+      <div id="genre_table">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Operations</th>
+          </tr>
+          <tr>
+            <td>Peter</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Lois</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Joe</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Cleveland</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
-    <div id="gallery" class="section">
-      <h2>Gallery</h2>
-      <p>This is the about section.</p>
-    </div>
+    <!-- genre box end -->
+
+    <!-- cast box start -->
     <div id="cast" class="section">
-      <h2>Castser</h2>
-      <p>This is the about section.</p>
+      <div id="cast_box">
+        <input list="director_list" id="director_input">
+        <button id="director_save"> Add Cast</button>
+        <datalist id="director_list">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+      </div>
+      <div id="cast_table">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Operations</th>
+          </tr>
+          <tr>
+            <td>Peter</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Lois</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Joe</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Cleveland</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
+    <!-- cast box end -->
+
+    <!-- gallery box start -->
+    <div id="gallery" class="section">
+      <div id="gallery_box">
+        <input type="file" id="director_input">
+        <button id="director_save"> Add Gallery Image</button>
+
+      </div>
+      <div id="gallery_table">
+        <table>
+          <tr>
+            <th>Images</th>
+            <th>Operations</th>
+          </tr>
+          <tr>
+            <td><img src="linkinpark.jpg" class="gallery_img" /></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images.jpg" class="gallery_img" /></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="test.jpg" class="gallery_img" /></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="owl.png" class="gallery_img" /></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- gallery box end -->
+
+    <!-- download box start -->
     <div id="download" class="section">
-      <h2>Downloader</h2>
-      <p>This is the about section.</p>
+      <div id="cast_box">
+        <input list="director_list" id="director_input">
+        <button id="director_save"> Add Director</button>
+        <datalist id="director_list">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+      </div>
+      <div id="cast_table">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Operations</th>
+          </tr>
+          <tr>
+            <td> <a href="https://github.com/YanMyoAung/user_oop/blob/main/app/assests/css/index.css"
+                target="_blank">Google Drive</a></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td> <a href="https://github.com/YanMyoAung/user_oop/blob/main/app/assests/css/index.css"
+                target="_blank">Media Fire</a></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://github.com/YanMyoAung/user_oop/blob/main/app/assests/css/index.css" target="_blank">Mega
+                Up</a>
+            </td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://github.com/YanMyoAung/user_oop/blob/main/app/assests/css/index.css" target="_blank">Movie
+                Link</a>
+            </td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
+    <!-- download box end -->
+
+    <!-- sideimg box start -->
     <div id="sideImage" class="section">
-      <h2>Side Image</h2>
-      <p>This is the about section.</p>
+      <div id="gallery_box">
+        <input type="file" id="director_input">
+        <button id="director_save"> Add Gallery Image</button>
+
+      </div>
+      <div id="gallery_table">
+        <table>
+          <tr>
+            <th>Images</th>
+            <th>Operations</th>
+          </tr>
+          <tr>
+            <td><img src="linkinpark.jpg" class="gallery_img" /></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images.jpg" class="gallery_img" /></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="test.jpg" class="gallery_img" /></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="owl.png" class="gallery_img" /></td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
+    <!-- sideimg box end -->
   </div>
 
   <script src="index.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-webcomponent@2/dist/tinymce-webcomponent.min.js"></script>
 </body>
 
 </html>
