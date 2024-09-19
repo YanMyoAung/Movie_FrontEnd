@@ -22,23 +22,44 @@
 
     <!-- movie box start -->
     <div id="movie" class="section active">
+      <div id="movie_wrapper_box">
+        <div id="movie_box_1">
+          <input type="text" id="movie_header" placeholder="Movie Name" />
+          <label for="movie_main_img">Movie Image</label>
+          <input type="file" id="movie_main_img" placeholder="Movie Image" />
+          <label for="movie_type">Movie Type</label>
+          <select name="movie_type" id="movie_type">
+            <option value="movies">Movies</option>
+            <option value="series">Series</option>
+          </select>
+          <input type="number" id="movie_released_year" placeholder="Released Year" />
+          <input type="text" id="movie_duration" placeholder="Movie Duration" />
+          <input type="number" id="movie_rating" min="1" max="10" placeholder="Movie Rating" />
+          <input type="number" id="movie_star_rating" min="1" max="5" placeholder="Movie Star Rating" />
+          <button id="movie_save" >Add Movie</button>
+        </div>
+        <div id="movie_box_2">
+          
+            <tinymce-editor api-key="0jljmzx5rvyw9rb2213n8iprrfzmerqlwj0ok2x7ha26qg20" height="500" menubar="false"
+              plugins="advlist autolink lists link image charmap preview anchor
+          searchreplace visualblocks code fullscreen
+          insertdatetime media table code help wordcount" toolbar="undo redo | blocks | bold italic backcolor |
+          alignleft aligncenter alignright alignjustify |
+          bullist numlist outdent indent | removeformat | help" content_style="body
+        {
+          font-family:Helvetica,Arial,sans-serif;
+          font-size:14px
+        }">
 
-      <div id="director_box">
-        <tinymce-editor api-key="0jljmzx5rvyw9rb2213n8iprrfzmerqlwj0ok2x7ha26qg20" height="500" menubar="false" plugins="advlist autolink lists link image charmap preview anchor
-      searchreplace visualblocks code fullscreen
-      insertdatetime media table code help wordcount" toolbar="undo redo | blocks | bold italic backcolor |
-      alignleft aligncenter alignright alignjustify |
-      bullist numlist outdent indent | removeformat | help" content_style="body
-    {
-      font-family:Helvetica,Arial,sans-serif;
-      font-size:14px
-    }">
+              <!-- Adding some initial editor content -->
+              Add Your Movie Details Here
 
-          <!-- Adding some initial editor content -->
-          &lt;p&gt;Welcome to the TinyMCE Web Component example!&lt;/p&gt;
-
-        </tinymce-editor>
+            </tinymce-editor>
+          
+        </div>
       </div>
+
+
     </div>
 
     <div id="director" class="section">
