@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <a class="active" href="#movie" id="movie_click">Movies</a>
+    <a href="#director" id="director_click">Directors</a>
+    <a href="#genre" id="genre_click">Genres</a>
+    <a href="#gallery" id="gallery_click">Gallery</a>
+    <a href="#cast" id="cast_click">Cast</a>
+    <a href="#sideImage" id="sideImage_click">Side Images</a>
+    <a href="#download" id="download_click">Download Links</a>
+  </div>
+
+  <div class="content">
+    <div id="movie" class="section active">
+      <h2>Movies</h2>
+      <p>This is the home section.</p>
+    </div>
+    <div id="director" class="section">
+      <div id="director_box">
+        <input list="director_list" id="director_input">
+        <button id="director_save"> Add Director</button>
+        <datalist id="director_list">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+      </div>
+      <div id="director_table">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Operations</th>
+          </tr>
+          <tr>
+            <td>Peter</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Lois</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Joe</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Cleveland</td>
+            <td>
+              <button class="director_edit">Edit</button>
+              <button class="director_delete">Delete</button>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+    <div id="genre" class="section">
+      <h2>Genres</h2>
+      <p>This is the contact section.</p>
+    </div>
+    <div id="gallery" class="section">
+      <h2>Gallery</h2>
+      <p>This is the about section.</p>
+    </div>
+    <div id="cast" class="section">
+      <h2>Castser</h2>
+      <p>This is the about section.</p>
+    </div>
+    <div id="download" class="section">
+      <h2>Downloader</h2>
+      <p>This is the about section.</p>
+    </div>
+    <div id="sideImage" class="section">
+      <h2>Side Image</h2>
+      <p>This is the about section.</p>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
